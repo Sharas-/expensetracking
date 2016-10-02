@@ -5,13 +5,13 @@ using System.Data.SQLite;
 
 namespace ExpenseTracking.Reporting
 {
-    internal class ExpencesDB : DbContext
+    internal class ExpensesDB : DbContext
     {
         private string myDbFile;
 
-        public DbSet<ExpenceRow> Expenses { get; set; }
+        public DbSet<ExpenseRow> Expenses { get; set; }
 
-        public ExpencesDB(string dbFile)
+        public ExpensesDB(string dbFile)
         {
             myDbFile = dbFile;
         }
@@ -26,13 +26,13 @@ namespace ExpenseTracking.Reporting
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ExpenceRow>().ToTable("expenses");
-            modelBuilder.Entity<ExpenceRow>().HasKey(e => e.InvoiceId);
-            modelBuilder.Entity<ExpenceRow>().Property(e => e.InvoiceId).HasColumnName("invoiceId");
-            modelBuilder.Entity<ExpenceRow>().Property(e => e.Date).HasColumnName("date");
-            modelBuilder.Entity<ExpenceRow>().Property(e => e.Category).HasColumnName("category");
-            modelBuilder.Entity<ExpenceRow>().Property(e => e.Cost).HasColumnName("cost");
-            modelBuilder.Entity<ExpenceRow>().Property(e => e.Memo).HasColumnName("memo");
+            modelBuilder.Entity<ExpenseRow>().ToTable("expenses");
+            modelBuilder.Entity<ExpenseRow>().HasKey(e => e.InvoiceId);
+            modelBuilder.Entity<ExpenseRow>().Property(e => e.InvoiceId).HasColumnName("invoiceId");
+            modelBuilder.Entity<ExpenseRow>().Property(e => e.Date).HasColumnName("date");
+            modelBuilder.Entity<ExpenseRow>().Property(e => e.Category).HasColumnName("category");
+            modelBuilder.Entity<ExpenseRow>().Property(e => e.Cost).HasColumnName("cost");
+            modelBuilder.Entity<ExpenseRow>().Property(e => e.Memo).HasColumnName("memo");
             base.OnModelCreating(modelBuilder);
         }
     }

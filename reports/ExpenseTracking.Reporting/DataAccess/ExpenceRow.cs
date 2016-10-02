@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExpenseTracking.Reporting
 {
-    internal class ExpenceRow
+    internal class ExpenseRow
     {
         public string InvoiceId { get; set; }
         public string Category { get; set; }

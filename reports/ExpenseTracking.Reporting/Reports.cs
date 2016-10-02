@@ -15,26 +15,26 @@ namespace ExpenseTracking.Reporting
             myDb = dbFile;
         }
 
-        public class Expence { public string InvoiceId { get; set; } public string Category { get; set; } public DateTime Date { get; set; } public decimal Cost { get; set; } public string Memo { get; set; } }
-        private List<Expence> Expenses()
+        public class Expense { public string InvoiceId { get; set; } public string Category { get; set; } public DateTime Date { get; set; } public decimal Cost { get; set; } public string Memo { get; set; } }
+        private List<Expense> Expenses()
         {
-            using (var db = new ExpencesDB(myDb))
+            using (var db = new ExpensesDB(myDb))
             {
                 return (from e in db.Expenses
-                        select new Expence()
+                        select new Expense()
                         {
                             Category = e.Category,
                             Cost = e.Cost,
                             Date = new DateTime(e.Date),
                             InvoiceId = e.InvoiceId,
                             Memo = e.Memo
-                        }).ToList<Expence>();
+                        }).ToList<Expense>();
             }
         }
 
-        public List<Expence> OrderedByDate()
+        public List<Expense> OrderedByDate()
         {
-            return Expenses().OrderBy((e) => e.Date).ToList<Expence>();
+            return Expenses().OrderBy((e) => e.Date).ToList<Expense>();
         }
 
         public class MonthlyExpense { public int Year { get; set; } public int Month { get; set; } public string Category { get; set; } public decimal Total { get; set; } }
