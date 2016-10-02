@@ -178,7 +178,7 @@
       <Project>{1a6c79f2-4c27-4b51-b923-917f8bbdd8ca}</Project>
       <Name>ExpenseTracking.Entry.Repository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\reports\ExpenseTracking.Reports\ExpenseTracking.Reporting.csproj">
+    <ProjectReference Include="..\..\reports\ExpenseTracking.Reporting\ExpenseTracking.Reporting.csproj">
       <Project>{bbecb318-9b63-4f8d-9779-5e944b0e7073}</Project>
       <Name>ExpenseTracking.Reporting</Name>
     </ProjectReference>

@@ -16,7 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "reports", "reports", "{80E1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracking.Entry.Repository", "entry\ExpenseTracking.Entry.Repository\ExpenseTracking.Entry.Repository.csproj", "{1A6C79F2-4C27-4B51-B923-917F8BBDD8CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracking.Reporting", "reports\ExpenseTracking.Reports\ExpenseTracking.Reporting.csproj", "{BBECB318-9B63-4F8D-9779-5E944B0E7073}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracking.Reporting", "reports\ExpenseTracking.Reporting\ExpenseTracking.Reporting.csproj", "{BBECB318-9B63-4F8D-9779-5E944B0E7073}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpenseTracking.Tests.Integration", "tests\ExpenseTracking.Tests.Integration\ExpenseTracking.Tests.Integration.csproj", "{8F20B600-324E-4F16-8977-55403C922C37}"
 EndProject
